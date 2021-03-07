@@ -228,6 +228,10 @@ h3 {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+:root {
+  --overlay-color: #03a9f4;
+}
 header {
   position: absolute;
   top: 0;
@@ -244,6 +248,24 @@ header .logo {
   text-transform: uppercase;
   cursor: pointer;
 }
+
+.showcase header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 .toggle {
   position: relative;
   width: 60px;
@@ -271,7 +293,7 @@ header .logo {
   justify-content: space-between;
   align-items: center;
   background: #111;
-  transition: 0.5s;
+  transition: 1s;
   z-index: 2;
 }
 .showcase.active {
@@ -293,7 +315,7 @@ header .logo {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #03a9f4;
+  background: var(--overlay-color);
   mix-blend-mode: overlay;
 }
 .text {
@@ -338,27 +360,7 @@ header .logo {
 .text a:hover {
   letter-spacing: 6px;
 }
-.social {
-  position: absolute;
-  z-index: 10;
-  bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.social li {
-  list-style: none;
-}
-.social li a {
-  display: inline-block;
-  margin-right: 20px;
-  filter: invert(1);
-  transform: scale(0.5);
-  transition: 0.5s;
-}
-.social li a:hover {
-  transform: scale(0.5) translateY(-15px);
-}
+
 .menu {
   position: absolute;
   top: 0;
@@ -381,7 +383,7 @@ header .logo {
   color: #111;
 }
 .menu ul li a:hover {
-  color: #03a9f4;
+  color: var(--overlay-color);
 }
 
 @media (max-width: 991px) {
