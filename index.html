@@ -14,19 +14,29 @@
   </head>
   <body>
 
-    <div class="bg"></div>
+ 
     
-    <section id="nav-bar">
-      
+   
 
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#"><img src="";></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+    <!-------------------Title------------------------->
+    <section class="showcase">
+      <header>
+        <h2 class="logo">OniceKicks</h2>
+        <div class="toggle"></div>
+      </header>
+      <video src="img/sneakerbg.mp4" muted loop autoplay></video>
+      <div class="overlay"></div>
+      <div class="text">
+        <h2>Never Stop To </h2> 
+        <h3>Exploring The World</h3>
+        <p>Come explore our sneaker collection and stay up to date with the latest trends and topic about your favorite sneakers</p>
+        <a href="#">Explore</a>
+      </div>
+     
+    </section>
+    <div class="menu">
+      <ul>
+        <li class="nav-item">
           <a class="nav-link" href="index.html">HOME</a>
           </li>
           <li class="nav-item">
@@ -35,25 +45,18 @@
           <li class="nav-item">
             <a class="nav-link" href="Profolio.html">COMING SOON</a>
           </li>
-         
-        </div> 
-  
-      </nav> 
-      </section>
-
-    <!-------------------Title------------------------->
-
-  
-
-    <div class="button">
-      <a href="Gallery.html" class="homebtn">Gallery</a>
+      </ul>
     </div>
 
-    <div class="button2">
-      <a href="Profolio.html" class="homebtn">Profolio</a>
-    </div>
+    <script>
+       const menuToggle = document.querySelector('.toggle');
+      const showcase = document.querySelector('.showcase');
 
-
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        showcase.classList.toggle('active');
+      })
+    </script>
 
     
   </body>
