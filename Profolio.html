@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>OniceKicks</title>
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -8,12 +10,34 @@
   </head>
   <body>
 
+
+    <section>
+      <div class="menu">
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="gallery.html">GALLERY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Profolio.html">COMING SOON</a>
+            </li>
+        </ul>
+      </div>
+    </section>
+    
+
+    
+
+    
+
     <section id="nav-bar">
       
 
-
+      <div class="toggle"></div>
       <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#"><img src="";></a>
+        <a class="navbar-brand" href="#"><img alt="" src="";></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -43,7 +67,7 @@
       <div class="row">
       <div class="col-md-3">
        <div class="product-top">
-         <img src="./img/giusippe.png" width="300" height="300">
+         <img alt="" src="./img/giusippe.png" width="300" height="300">
          <div class="overlay-right">
         
          </div>
@@ -62,7 +86,7 @@
   
        <div class="col-md-3">
         <div class="product-top">
-          <img src="./img/givanchy.jpg" width="300" height="300">
+          <img alt="" src="./img/givanchy.jpg" width="300" height="300">
            <div class="overlay-right">
            
           </div>
@@ -81,7 +105,7 @@
   
        <div class="col-md-3">
         <div class="product-top">
-          <img src="./img/guccii.jpg" width="300" height="300">
+          <img alt="" src="./img/guccii.jpg" width="300" height="300">
            <div class="overlay-right">
            
           </div>
@@ -100,7 +124,7 @@
 
        <div class="col-md-3">
         <div class="product-top">
-          <img src="./img/hermas.jpg" width="300" height="300">
+          <img alt="" src="./img/hermas.jpg" width="300" height="300">
           <div class="overlay-right">
          
           </div>
@@ -118,7 +142,7 @@
      
        <div class="col-md-3">
         <div class="product-top">
-          <img src="./img/foamposite.png" width="300" height="300">
+          <img alt="" src="./img/foamposite.png" width="300" height="300">
           <div class="overlay-right">
          
           </div>
@@ -136,7 +160,7 @@
      
        <div class="col-md-3">
         <div class="product-top">
-          <img src="./img/roc.jpg" width="300" height="300">
+          <img alt="" src="./img/roc.jpg" width="300" height="300">
           <div class="overlay-right">
          
           </div>
@@ -154,7 +178,7 @@
 
        <div class="col-md-3">
         <div class="product-top">
-          <img src="./img/wang2.jpg" width="300" height="300">
+          <img alt="" src="./img/wang2.jpg" width="300" height="300">
           <div class="overlay-right">
          
           </div>
@@ -172,7 +196,7 @@
 
        <div class="col-md-3">
         <div class="product-top">
-          <img src="./img/season.jpg" width="300" height="300">
+          <img alt="" src="./img/season.jpg" width="300" height="300">
           <div class="overlay-right">
          
           </div>
@@ -198,7 +222,7 @@
           <div class="row">
           <div class="col-md-3">
            <div class="product-top">
-             <img src="./img/penny.jpg" width="300" height="300">
+             <img alt="" src="./img/penny.jpg" width="300" height="300">
              <div class="overlay-right">
             
              </div>
@@ -217,7 +241,7 @@
 
          <div class="col-md-3">
           <div class="product-top">
-            <img src="./img/barkley.jpeg" width="300" height="300">
+            <img alt="" src="./img/barkley.jpeg" width="300" height="300">
            <div class="overlay-right">
            
             </div>
@@ -235,7 +259,7 @@
 
          <div class="col-md-3">
           <div class="product-top">
-            <img src="./img/airmax.jpg" width="300" height="300">
+            <img alt="" src="./img/airmax.jpg" width="300" height="300">
            <div class="overlay-right">
            
             </div>
@@ -269,6 +293,16 @@
            </div>
          </div>
       </section>
+
+      <script>
+        const menuToggle = document.querySelector('.toggle');
+       const showcase = document.querySelector('.showcase');
+     
+       menuToggle.addEventListener('click', () => {
+         menuToggle.classList.toggle('active');
+         showcase.classList.toggle('active');
+       })
+       </script>
            
         
   </body>

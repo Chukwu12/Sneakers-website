@@ -230,7 +230,7 @@ h3 {
 }
 
 :root {
-  --overlay-color: #03a9f4;
+  --overlay-color: ;
 }
 header {
   position: absolute;
@@ -406,7 +406,7 @@ header .logo {
 }
 
 nav-bar {
-  position: sticky;
+  position: -webkit-sticky;
   top: 0;
   z-index: 10;
 }
@@ -543,6 +543,17 @@ nav-bar {
 }
 
 /*blog*/
+
+@media (max-width: 990px) {
+  .xmodule-blog .xmodule-blog-header,
+  .xmodule-blog
+    .xmodule-blog-posts
+    .xmodule-blog
+    .xmodule-blog-posts
+    a.xmodule-blog-post,
+  .xmodule-full-wrapper,
+  .xmodule-blog;
+}
 .xmodule-blog .xmodule-blog-header {
   color: black;
   font-family: "Knockout 49 4r", "HelveticaNeue-CondensedBold", "Arial Narrow",
