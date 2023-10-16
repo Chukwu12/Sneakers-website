@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@300;400;800&display=swap');
 
-/* ======================Base===================== */
 
-* {box-sizing: border-box;
-padding: 0;
-margin: 0;
-}
 
 
 body {
@@ -18,34 +13,33 @@ body {
     font-size: 62.5%;
   }
   
-  header{
-    height: 70px;
-    background: black;
-
+  * {box-sizing: border-box;}
   
   a {
     color: #111;
     text-decoration: none;
   }
-
-  img{
-    display: block;
-    max-width: 100%;
-    height: auto;
+  
+  p {
+    line-height: 25px;
   }
-
+  
+  main p, main span, main small {
+    color: #a7a7a7;
+  }
+  
   ul {
     list-style: none;
     padding: 0;
     margin: 0;  
   }
   
-  p {
-    line-height: 25px;
+  .container {
+    padding: 2em 2em 0 2em;
+    max-width: 1350px;
+    margin: 0 auto;
   }
-/* ============================================= */
-
-/* =======================header/nav======================== */
+  
   nav {
     display: flex;
     justify-content: space-between;
@@ -57,43 +51,13 @@ body {
   nav ul {
     display: flex;
     gap: 20px;
-    color: white;
-    font-size: 1.5em;
     width: 30%;
     justify-content: center;
   }
-
-  nav a {
-    color: white;
-    text-decoration: none;
-  }
-  nav__toggle,
-  nav__close{
-    display: flex;
-    font-size: 1.25rem;
-    color: black;
-    cursor: pointer;
-  }
-  /* ===================End========================== */
-  
-  main p, main span, main small {
-    color: #a7a7a7;
-  }
-  
-
-  
-  .container {
-    padding: 2em 2em 0 2em;
-    max-width: 1350px;
-    margin: 0 auto;
-  }
-  
-
   
   .brand {
     font-weight: 600;
-    font-size: 2em;
-    color: white;
+    font-size: 1.5em;
   }
   
    main, .bar-bottom {
