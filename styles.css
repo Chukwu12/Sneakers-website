@@ -167,14 +167,90 @@ body {
 }
 }
 
+/* ========================Gallery Page================ */
+.banner__container{
+  position: relative;
+  display: grid;
+  row-gap: 2rem;
+  padding-block: 8rem 4rem;
+}
+
+.banner__subtitle,
+.banner__title,
+.banner__button{
+  font-family: var(--second-font);
+}
+
+.banner__subtitle{
+  font-size: var(--h2-font-size);
+  margin-bottom: .5rem;
+}
+
+.banner__title{
+  font-size: var(--biggest-font-size);
+  margin-bottom: 2rem;
+}
+
+.banner__description{
+  font-size: var(--small-font-size);
+  margin-bottom: 2rem;
+}
+
+.banner__button{
+  display: block;
+  background-color: var(--white-color);
+  box-shadow: 0 8px 32px hsla(0, 0%, 0%, .1);
+  padding: 1rem 3rem;
+  border-radius: 4rem;
+  font-weight: var(--font-bold);
+  transition: box-shadow .4s;
+}
+
+.banner__button:hover{
+  box-shadow:  0 8px 32px hsla(0, 0%, 0%, .1);
+}
+
+.banner__social{
+  position: absolute;
+  top: 10rem;
+  right: 0;
+  display: grid;
+  row-gap: 1rem;
+}
 
 
+.banner__social-link{
+  display: inline-flex;
+  font-size: 1.125rem;
+  color: var(--title-color);
+  transition:  .4s;
+}
+
+.banner__social-link:hover{
+  transform: translateY(-.25rem);
+}
 
 
+.banner__imgs{
+  display: grid;
+  position: relative;
+}
 
+banner__shoe{
+  width: 300px;
+  margin-inline: auto;
+}
 
-
-
+.banner__circle{
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(180deg,hsl(0, 0%, 100%)
+  hsl(0, 0%, 100%));
+  border-radius: 50%;
+  position: absolute;
+  insert:0;
+  margin: auto;
+}
 
 
 
