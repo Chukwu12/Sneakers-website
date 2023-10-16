@@ -76,6 +76,7 @@ body {
   .nav__close{
     display: flex;
     font-size: 1.25rem;
+    cursor: pointer;
   }
    
   
