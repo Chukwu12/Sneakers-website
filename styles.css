@@ -180,7 +180,7 @@ body {
   padding-block: 8rem 4rem;
 }
 
-.banner__subtitle,
+.banner-subtitle,
 .banner__title,
 .banner__button{
   font-family: var(--second-font);
