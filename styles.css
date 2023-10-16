@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@300;400;800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Syncopate:wght@400;700&display=swap");
 /* ==========================Base======================= */
 
 
@@ -39,12 +39,58 @@ body {
     max-width: 1350px;
     margin: 0 auto;
   }
-  /* ============================================= */
+
+
+  /*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --black-color: hsl(0, 0%, 5%);
+  --black-color-light: hsl(0, 0%, 70%);
+  --white-color: hsl(0, 0%, 100%);
+  --title-color: hsl(0, 0%, 5%);
+  --text-color: hsl(0, 0%, 55%);
+  --body-color: hsl(0, 0%, 96%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --second-font: "Syncopate", sans-serif;
+  --biggest-font-size: 2.5rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-bold: 700;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1152px) {
+  :root {
+    --biggest-font-size: 4.5rem;
+    --h2-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
 
   /* =======================Header/nav===================== */
   header{
     height: 100px;
     background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
   
   nav {
