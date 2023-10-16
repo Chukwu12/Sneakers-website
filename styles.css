@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@300;400;800&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Syncopate:wght@400;700&display=swap");
+
 /* ==========================Base======================= */
 
 
@@ -85,7 +85,6 @@ body {
 
   /* =======================Header/nav===================== */
   header{
-    height: 100px;
     background: black;
     position: fixed;
     top: 0;
@@ -126,12 +125,11 @@ body {
 
   .nav__list{
     display: flex;
-    flex-direction: column;
     row-gap: 2.5rem;
   }
 
   .nav__link{
-    color: var(--title-color);
+    color: white;
     font-family: var(--second-font);
   }
 
