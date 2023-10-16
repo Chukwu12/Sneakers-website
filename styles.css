@@ -231,7 +231,7 @@ body {
 }
 
 
-.banner__imgs{
+.banner-imgs{
   display: grid;
   position: relative;
 }
