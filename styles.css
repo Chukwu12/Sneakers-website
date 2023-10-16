@@ -154,7 +154,7 @@ body {
   /* ========================================= */
 
 
-  /* ===================Nav for mobile devices */
+  /* ===================Nav for mobile devices================ */
 @media screen and (max-width: 1023px) {
 .nav__menu{
   position: fixed;
