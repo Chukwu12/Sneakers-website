@@ -168,6 +168,11 @@ body {
 }
 
 /* ========================Gallery Page================ */
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
 .banner__container{
   position: relative;
   display: grid;
@@ -244,11 +249,11 @@ banner__shoe{
 .banner__circle{
   width: 250px;
   height: 250px;
-  background: linear-gradient(180deg,hsl(0, 0%, 100%)
+  background: linear-gradient(180deg,hsl(0, 0%, 100%),
   hsl(0, 0%, 100%));
   border-radius: 50%;
   position: absolute;
-  insert:0;
+  inset:0;
   margin: auto;
 }
 
