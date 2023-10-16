@@ -68,6 +68,10 @@ body {
     font-size: 1.5em;
   }
 
+  nav a {
+    color: white;
+  }
+
   .nav__toggle,
   .nav__close{
     display: flex;
@@ -82,7 +86,30 @@ body {
   }
 
   /* ========================================= */
+
+
+  /* ===================Nav for mobile devices */
+@media screen and (max-width: 1023px) {
   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    main, .bar-bottom {
     display: grid;
     grid-template-columns: 2fr 3fr 2fr;
