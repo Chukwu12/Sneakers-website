@@ -266,6 +266,7 @@ let swiperShoes = new Swiper('.banner__swiper', {
   direction: 'vertical',
   loop: true,
   spaceBetween: 32,
+  grabCursor: true,
 
   pagination: {
     el: '.swiper-pagination',
