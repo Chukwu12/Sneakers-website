@@ -191,6 +191,7 @@ img {
 .banner__title,
 .banner__button{
   font-family: var(--second-font);
+  color: var(--title-color);
 }
 
 .banner__subtitle{
@@ -222,7 +223,7 @@ img {
   box-shadow:  0 8px 32px hsla(0, 0%, 0%, .1);
 }
 
-.banner__social{
+.banner__socials{
   position: absolute;
   top: 10rem;
   right: 0;
@@ -243,7 +244,7 @@ img {
 }
 
 
-.banner-imgs{
+.banner__imgs{
   display: grid;
   position: relative;
 }
