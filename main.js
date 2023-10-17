@@ -287,3 +287,10 @@ let swiperShoes = new Swiper('.banner__swiper', {
 })
 
 /*=============== SHADOW HEADER ===============*/
+const shadowHeader = () => {
+  const header = document.getElementById('header')
+  this.scrollY >= 50 ? header.classList.add('scroll-header')
+                    :  header.classList.remove('scroll-header')
+}
+
+window.addEventListener('scroll' , shadowHeader)

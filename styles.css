@@ -97,6 +97,9 @@ img {
     top: 0;
     left: 0;
     width: 100%;
+    background-color: var(--body-color);
+    z-index: var(--z-fixed);
+    transition: box-shadow .4s;
   }
   
   nav {
@@ -292,6 +295,11 @@ img {
   margin: 0 2px;
 }
 
+
+/* shadow header */
+.shadow-header{
+  box-shadow: 0 1px 16px hsla(0, 0%, 0%, .1); ;
+}
 
 
 
