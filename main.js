@@ -249,7 +249,7 @@ if(navToggle) {
 // ================hidden menu=======================//
 if(navClose){
   navClose.addEventListener('click', ()=>{
-    navMenu.classList.add('show-menu')
+    navMenu.classList.remove('show-menu')
   })
 }
 /*=============== REMOVE MENU MOBILE ===============*/
