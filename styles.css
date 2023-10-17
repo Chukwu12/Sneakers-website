@@ -41,6 +41,13 @@ body {
   }
 
 
+  
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
   /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
