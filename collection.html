@@ -20,7 +20,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
 
 <!--=============== SWIPER CSS ===============-->
-      <link rel="stylesheet" href="">
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
   <style id="cssOutput"></style>
@@ -81,19 +84,23 @@
       <div class="banner__imgs">
         <div class="banner__circle"></div>
 
-        <div class="banner__swiper">
-          <div>
-            <article class="banner__article">
+        <div class="banner__swiper swiper">
+          <div class="swiper-wrapper">
+            <article class="banner__article swiper-slide">
               <img src="img/shoe-1.png" alt="shoe-1" class="banner__shoe">
             </article>
-            <article class="banner__article">
+            <article class="banner__article swiper-slide">
               <img src="img/shoe-2.png" alt="shoe-2" class="banner__shoe">
             </article>
-            <article class="banner__article">
+            <article class="banner__article swiper-slide">
               <img src="img/shoe-3.png" alt="shoe-3" class="banner__shoe">
             </article>
           </div>
         </div>
+
+         <!--  pagination -->
+        <div class="swiper-pagination"></div>
+
       </div>
 
       <div class="banner__socials">
@@ -120,7 +127,8 @@
 
 
 <!-- Banner End-->
-
+<!--=============== SWIPER JS ===============-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="./main.js"></script>
 </body>
 </html>

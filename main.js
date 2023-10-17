@@ -262,6 +262,17 @@ const linkAction = () =>{
 navLink.forEach(n => n.addEventListener('click',linkAction))
 
 /*=============== SWIPER SHOE ===============*/
+let swiperShoes = new Swiper('.banner__swiper', {
+  direction: 'vertical',
+  loop: true,
+  spaceBetween: 32,
 
+  pagination: {
+    el: '.swiper-pagination',
+    clickable:true,
+  },
+
+
+})
 
 /*=============== SHADOW HEADER ===============*/
