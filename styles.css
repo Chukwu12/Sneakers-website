@@ -177,6 +177,91 @@ img {
 }
 }
 
+
+/* for medium devices */
+@media screen and (min-width: 576px) {
+  .nav__menu {
+    width: 60%;
+  }
+
+  .banner__container{
+    grid-template-columns: 350px;
+    justify-content: center;
+  }
+
+  .banner__description {
+    text-align: center;
+  }
+}
+
+
+/* for large devices */
+
+@media screen and (min-width: 1023px ) {
+  .nav {
+    height: calc(var(--header-height) + 2rem);
+  }
+
+  .nav__toggle,
+  .nav__close{
+    display: none;
+  }
+
+  .nav__menu{
+    width: initial;
+  }
+
+  .nav__list{
+    flex-direction: row;
+    column-gap: 4rem;
+  }
+
+  .banner__container {
+    height: 100vh;
+    grid-template-columns: repeat(2, 400px);
+    place-items: center;
+    column-gap: 2rem;
+  }
+
+  .banner__description{
+    text-align: initial;
+  }
+
+  .banner__socials{
+    align-content: center;
+      top: 0;
+  }
+}
+
+ @media screen and (min-width: 1152px) {
+  .container{
+    margin-inline:auto;
+  }
+
+  .banner__container{
+    grid-template-columns: 430px, 600px;
+    column-gap: 4.5rem;
+  }
+
+  .banner__title{
+    margin-bottom: 1.25rem;
+  }
+
+  .banner__description{
+    font-size: var(--normal-font-size);
+    margin-bottom: 3rem;
+  }
+
+  .banner__shoe{
+    width: 600px;
+  }
+
+  .banner__circle{
+    width: 500px;
+    height: 500px;
+  }
+}
+
 /* ========================Gallery Page================ */
 .container {
   max-width: 1120px;
