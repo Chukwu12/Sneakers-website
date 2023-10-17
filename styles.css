@@ -187,7 +187,7 @@ img {
   padding-block: 8rem 4rem;
 }
 
-.banner-subtitle,
+.banner__subtitle,
 .banner__title,
 .banner__button{
   font-family: var(--second-font);
