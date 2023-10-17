@@ -272,8 +272,7 @@ let swiperShoes = new Swiper('.banner__swiper', {
       translate: [-100, 0, -500],
       opacity: 0,
     },
-  },
-
+  
   next:{
     translate: [-100, 0, -500],
     opacity: 0,
