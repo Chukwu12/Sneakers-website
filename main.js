@@ -264,7 +264,7 @@ const linkAction = () =>{
 navLink.forEach(n => n.addEventListener('click',linkAction))
 
 /*=============== SWIPER SHOE ===============*/
-let swiper = new Swiper('.banner__swiper', {
+let swiperShoes = new Swiper('.banner__swiper', {
   loop: true,
   spaceBetween: 32,
   grabCursor: true,
