@@ -332,7 +332,7 @@ img {
 
 .banner__social-link{
   display: inline-flex;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   color: var(--title-color);
   transition:  .4s;
 }
