@@ -235,7 +235,7 @@ for(let i = 0; i < pag.length; i++) {
 }
 
 /*=============== SHOW MENU ===============*/
-const navMenu = document.getElementById('nav-menu'),
+const navMenu = document.getElementById('nav__menu'),
 navToggle = document.getElementById('nav-toggle'),
 navClose = document.getElementById('nav-close')
 
