@@ -146,6 +146,23 @@ header{
       transition: right .4s;
     }
     }
+
+    .nav__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.5rem;
+    }
+
+    .nav__link{
+        color: var(--title-color);
+        font-family: var(--second-font);
+    }
+
+    .nav__close{
+        position: absolute;
+        top: 1.125rem;
+        right: 1.5rem;
+    }
     
     
     /* for medium devices */
