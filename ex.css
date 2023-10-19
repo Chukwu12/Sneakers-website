@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Syncopate:wght@400;700&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --black-color: hsl(0, 0%, 5%);
+  --black-color-light: hsl(0, 0%, 70%);
+  --white-color: hsl(0, 0%, 100%);
+  --title-color: hsl(0, 0%, 5%);
+  --text-color: hsl(0, 0%, 55%);
+  --body-color: hsl(0, 0%, 96%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --second-font: "Syncopate", sans-serif;
+  --biggest-font-size: 2.5rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-bold: 700;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1152px) {
+  :root {
+    --biggest-font-size: 4.5rem;
+    --h2-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+/*=============== HEADER & NAV ===============*/
+
+
+/* Navigation for mobile devices */
+
+
+/* Show menu */
+
+
+/* Add shadow header */
+
+
+/*=============== HOME ===============*/
+
+
+/* Swiper class */
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+
+/* For medium devices */
+
+
+/* For large devices */
+
+
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-color: var(--body-color);
+    z-index: var(--z-fixed);
+}
+
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand{
+    width: 3rem;
+}
+
+.nav__toggle,
+.nav__close{
+    display: flex;
+    font-size: 1.25rem;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+/* ===================Nav for mobile devices================ */
+@media screen and (max-width: 1023px) {
+    .nav__menu{
+      position: fixed;
+      top: 0;
+      right: -100%;
+      background-color: var(--body-color);
+      box-shadow:  -1px 0 16px hsla(0, 0%, 0%, .1);
+      width: 80%;
+      height: 100%;
+      padding: 6rem 3rem;
+      transition: right .4s;
+    }
+    }
+    
+    
+    /* for medium devices */
+    @media screen and (min-width: 576px) {
+      .nav__menu {
+        width: 60%;
+      }
+    
+      .banner__container{
+        grid-template-columns: 350px;
+        justify-content: center;
+      }
+    
+      .banner__description {
+        text-align: center;
+      }
+    }
+    
+    
+    /* for large devices */
+    
+    @media screen and (min-width: 1023px ) {
+      .nav {
+        height: calc(var(--header-height) + 2rem);
+      }
+    
+      .nav__toggle,
+      .nav__close{
+        display: none;
+      }
+    
+      .nav__menu{
+        width: initial;
+      }
+    
+      .nav__list{
+        flex-direction: row;
+        column-gap: 4rem;
+      }
+    
+      .banner__container {
+        height: 100vh;
+        grid-template-columns: repeat(2, 400px);
+        place-items: center;
+        column-gap: 2rem;
+      }
+    
+      .banner__description{
+        text-align: initial;
+      }
+    
+      .banner__socials{
+        align-content: center;
+          top: 0;
+      }
+    }
+    
+     @media screen and (min-width: 1152px) {
+      .container{
+        margin-inline:auto;
+      }
+    
+      .banner__container{
+        grid-template-columns: 430px, 600px;
+        column-gap: 4.5rem;
+      }
+    
+      .banner__title{
+        margin-bottom: 1.25rem;
+      }
+    
+      .banner__description{
+        font-size: var(--normal-font-size);
+        margin-bottom: 3rem;
+      }
+    
+      .banner__shoe{
+        width: 600px;
+      }
+    
+      .banner__circle{
+        width: 500px;
+        height: 500px;
+      }
+    }
+    
+    @media screen and (min-width: 1248px) {
+      .banner__socials{
+        right: -3rem;
+        row-gap: 2rem;
+      }
+    
+      .banner__social-link{
+        font-size: 1.5rem;
+      }
+    }
+
+    .container {
+        max-width: 1120px;
+        margin-inline: 1.5rem;
+      }
+      
+      .banner__container{
+        position: relative;
+        display: grid;
+        row-gap: 2rem;
+        padding-block: 8rem 4rem;
+      }
+      
+      .banner__subtitle,
+      .banner__title,
+      .banner__button{
+        font-family: var(--second-font);
+        color: var(--title-color);
+      }
+      
+      .banner__subtitle{
+        font-size: var(--h2-font-size);
+        margin-bottom: .5rem;
+      }
+      
+      .banner__title{
+        font-size: var(--biggest-font-size);
+        margin-bottom: 1rem;
+      }
+      
+      .banner__description{
+        font-size: var(--small-font-size);
+        margin-bottom: 2rem;
+      }
+      
+      .banner__button{
+        display: inline-block;
+        background-color: var(--white-color);
+        box-shadow: 0 8px 32px hsla(0, 0%, 0%, .1);
+        padding: 1rem 3rem;
+        border-radius: 4rem;
+        font-weight: var(--font-bold);
+        transition: box-shadow .4s;
+      }
+      
+      .banner__button:hover{
+        box-shadow:  0 8px 32px hsla(0, 0%, 0%, .1);
+      }
+      
+      .banner__socials{
+        position: absolute;
+        top: 10rem;
+        right: 0;
+        display: grid;
+        row-gap: 1rem;
+      }
+      
+      
+      .banner__social-link{
+        display: inline-flex;
+        font-size: 1.25rem;
+        color: var(--title-color);
+        transition:  .4s;
+      }
+      
+      .banner__social-link:hover{
+        transform: translateY(-.25rem);
+      }
+      
+      
+      .banner__imgs{
+        display: grid;
+        position: relative;
+      }
+      
+      .banner__shoe{
+        width: 300px;
+        margin-inline: auto;
+      }
+      
+      .banner__circle{
+        width: 250px;
+        height: 250px;
+        background: linear-gradient(180deg,hsl(0, 0%, 100%),
+        hsl(0, 0%, 100%));
+        border-radius: 50%;
+        position: absolute;
+        inset:0;
+        margin: auto;
+      }
+      
+      /* Swiper */
+      .swiper{
+        margin-inline: initial;
+      }
+      
+      .swiper-pagination-bullets.swiper-pagination-horizontal{
+        bottom: -2rem;
+      }
+      
+      .swiper-pagination-bullet{
+        width: 1rem;
+        height: .25rem;
+        border-radius: 1rem;
+        background-color: var(--black-color-light);
+        opacity: 1;
+        transition: background-color .3s, width .3s;
+      }
+      
+      .swiper-pagination-bullet-active{
+        width: 1.25rem;
+        background-color: var(--black-color);
+      }
+      
+      .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+        margin: 0 2px;
+      }
+      
+      
+      /* shadow header */
+      .shadow-header{
+        box-shadow: 0 1px 16px hsla(0, 0%, 0%, .1); ;
+      }
+      
