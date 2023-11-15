@@ -272,7 +272,7 @@ img {
 }
 /* ========================Gallery Page================ */
 .container {
-  max-width: 1120px;
+  /* max-width: 1120px; */
   margin-inline: 1.5rem;
 }
 
