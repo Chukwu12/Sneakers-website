@@ -1,70 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head >
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>OniceKicks</title>
-    <link rel="stylesheet" href="/css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Onice Kicks | Home</title>
 
- 
-    
-   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="home-page">
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="index.html" class="brand">Onice Kicks</a>
 
-    <!-------------------Title------------------------->
-    <section class="showcase">
-      <header>
-        <h2 class="logo">OniceKicks</h2>
-        <div class="toggle"></div>
-      </header>
-      <video src="img/sneakerbg.mp4" muted loop autoplay></video>
-      <div class="overlay"></div>
-      <div class="text">
-        <h2>Never Stop</h2> 
-        <h3>Exploring The World</h3>
-        <p>Come explore our sneaker collection and stay up to date with the latest trends and topic about your favorite sneakers</p>
-        <a href="gallery.html">Explore</a>
-      </div>
-     
-    </section>
-
-    <section>
-      <div class="menu">
-        <ul>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">HOME</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="gallery.html">GALLERY</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="collection.html">Collections</a>
-              </li>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+          <li><a href="collection.html" class="nav__link">Collections</a></li>
+          <li><a href="Profolio.html" class="nav__link">Portfolio</a></li>
         </ul>
+
+        <a href="#" class="nav__cart" aria-label="View cart">
+          <span class="material-icons-outlined">shopping_bag</span>
+        </a>
+
+        <div class="nav__close" id="nav-close" aria-label="Close navigation">
+          <i class="ri-close-line"></i>
+        </div>
       </div>
-    </section>
-    
 
-    <script>
-       const menuToggle = document.querySelector('.toggle');
-      const showcase = document.querySelector('.showcase');
+      <div class="nav__toggle" id="nav-toggle" aria-label="Open navigation">
+        <i class="ri-apps-2-fill"></i>
+      </div>
+    </nav>
+  </header>
 
-      menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        showcase.classList.toggle('active');
-      })
-    </script>
+  <section class="hero">
+    <video src="img/sneakerbg.mp4" autoplay muted loop playsinline></video>
+    <div class="hero__overlay"></div>
 
-    
-  </body>
+    <div class="hero__content">
+      <span class="hero__kicker">New Season . New Rotation</span>
+      <h1>Built for the street. Ready for every move.</h1>
+      <p>
+        Discover statement sneakers, performance silhouettes, and limited drops
+        curated for comfort, speed, and style.
+      </p>
+
+      <div class="hero__actions">
+        <a href="gallery.html" class="btn btn--primary">Explore Gallery</a>
+        <a href="collection.html" class="btn btn--ghost">Shop Collection</a>
+      </div>
+    </div>
+
+    <aside class="hero__stats">
+      <article>
+        <strong>120+</strong>
+        <span>Verified Styles</span>
+      </article>
+      <article>
+        <strong>24H</strong>
+        <span>Dispatch Window</span>
+      </article>
+      <article>
+        <strong>4.9</strong>
+        <span>Customer Score</span>
+      </article>
+    </aside>
+  </section>
+
+  <section class="featured">
+    <div class="section-head">
+      <h2>Featured This Week</h2>
+      <a href="collection.html">See all picks</a>
+    </div>
+
+    <div class="featured-grid">
+      <article class="feature-card">
+        <img src="img/airforce1.jpg" alt="Air Force 1">
+        <div>
+          <h3>Air Force 1</h3>
+          <p>Everyday icon with clean lines and all-day ease.</p>
+        </div>
+      </article>
+
+      <article class="feature-card">
+        <img src="img/jordansretro.jpg" alt="Jordan Retro">
+        <div>
+          <h3>Jordan Retro</h3>
+          <p>Legendary court DNA reimagined for modern fits.</p>
+        </div>
+      </article>
+
+      <article class="feature-card">
+        <img src="img/yeezy1.jpg" alt="Yeezy Boost">
+        <div>
+          <h3>Yeezy Boost</h3>
+          <p>Minimal profile with standout cushioning comfort.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="split">
+    <div class="split__content">
+      <span>Style Direction</span>
+      <h2>One store. Multiple sneaker moods.</h2>
+      <p>From retro hardwood classics to futuristic runners, mix categories and build your weekly rotation by occasion.</p>
+      <a href="collection.html" class="btn btn--primary">Build My Rotation</a>
+    </div>
+
+    <div class="split__visual">
+      <img src="img/shoegallery.jpg" alt="Sneaker rack display">
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
 </html>
-

@@ -1,140 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <title>Onice Kicks | Collection</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <style>*{transition: 0.4s;}</style>
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/bb1892d46f.js" crossorigin="anonymous"></script>
-  
-<!--=============== FAVICON ===============-->
-<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-
-<!--=============== REMIXICONS ===============-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
-
-<!--=============== SWIPER CSS ===============-->
-<link rel="stylesheet" href="assets/swiper-bundle.min.css">
-<link href="
-https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css
-" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="/css/styles.css">
-  <style id="cssOutput"></style>
-  <title>Onice Kicks</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/collection.css">
 </head>
-<body>
+<body class="collection-page">
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="index.html" class="brand">Onice Kicks</a>
 
-
-<!-- Nav -->
-<header class="header" id="header">
-  <nav>
-    <a href="index.html" class="brand">Onice Kicks</a>
-    <div class="nav__menu" id="nav-menu">
+      <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
-            <li class="nav__item">
-                <a href="index.html" class="nav__link">Home</a>
-            </li>
-            <li class="nav__item">
-                <a href="gallery.html" class="nav__link">Gallrey</a>
-            </li>
-            <li class="nav__item">
-                <a href="collection.html" class="nav__link">Collection</a>
-            </li>
-       
-            <a href="#"><span class="material-icons-outlined">
-              shopping_bag
-          </ul>
-           <!-- close btn -->
-      <div class="nav__close" id="nav-close">
-        <i class="ri-close-line"></i>
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+          <li><a href="collection.html" class="nav__link">Collections</a></li>
+          <li><a href="Profolio.html" class="nav__link">Portfolio</a></li>
+        </ul>
+
+        <a href="#" class="nav__cart" aria-label="View cart">
+          <span class="material-icons-outlined">shopping_bag</span>
+        </a>
+
+        <div class="nav__close" id="nav-close" aria-label="Close navigation">
+          <i class="ri-close-line"></i>
+        </div>
       </div>
-    </div>
-      <!-- toggle btn -->
-      <div class="nav__toggle" id="nav-toggle">
+
+      <div class="nav__toggle" id="nav-toggle" aria-label="Open navigation">
         <i class="ri-apps-2-fill"></i>
       </div>
-  </nav>
-</header>
-<!-- Nav  End-->
+    </nav>
+  </header>
 
-
-  <!-- Banner -->
-<section class="banner">
-  <div class="banner__container container">
-    <div class="banner__data">
-      <h2 class="banner__subtitle">Onice Kicks</h2>
-
-      <h1 class="banner__title">
-        onice<br>
-        kicks<br>
-      </h1>
-
-      <p class="banner-description">
-        Premium leather across the profile further reinforces its rugged build, while the versatile silhouette is topped off with a crisp white SFB's Free-inspired sole unit that offers tough, yet flexible cushioning upon every step.
-      </p>
-
-      <a href="#" class="banner__button">Shop Now</a>
-
-      <div class="banner__imgs">
-        <div class="banner__circle"></div>
-
-        <div class="banner__swiper swiper">
-          <div class="swiper-wrapper">
-            <article class="banner__article swiper-slide">
-              <img src="img/shoe-1.png" alt="shoe-1" class="banner__shoe">
-            </article>
-            <article class="banner__article swiper-slide">
-              <img src="img/shoe-2.png" alt="shoe-2" class="banner__shoe">
-            </article>
-            <article class="banner__article swiper-slide">
-              <img src="img/shoe-3.png" alt="shoe-3" class="banner__shoe">
-            </article>
-          </div>
-        </div>
-
-         <!--  pagination -->
-        <div class="swiper-pagination"></div>
-
+  <section class="collection-hero">
+    <div class="collection-hero__panel">
+      <div>
+        <span class="collection-hero__kicker">Seasonal Edit</span>
+        <h1>Build your rotation with statement pairs.</h1>
+        <p>
+          Curated drops from street-ready classics to high-cushion daily trainers.
+          Every card below highlights a different mood so you can shop by style, not only by brand.
+        </p>
       </div>
 
-      <div class="banner__socials">
-        <a href="#" target="_blank" class="banner__social-link">
-          <i class="ri-facebook-circle-line"></i>
-        </a>
-
-        <a href="#" target="_blank" class="banner__social-link">
-          <i class="ri-instagram-line"></i>
-        </a>
-
-        <a href="#" target="_blank" class="banner__social-link">
-          <i class="ri-youtube-line"></i>
-        </a>
+      <div class="collection-hero__chips">
+        <span>New Drop</span>
+        <span>Limited</span>
+        <span>Everyday</span>
+        <span>Retro</span>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section class="collection-content">
+    <div class="collection-toolbar">
+      <div>
+        <h2>Top Picks This Week</h2>
+        <p>Fresh arrivals selected by comfort, silhouette, and colorway versatility.</p>
+      </div>
 
+      <div class="collection-stats">
+        <span class="collection-pill" id="collection-count">12 Sneakers</span>
+        <span class="collection-pill">Fast Shipping</span>
+      </div>
+    </div>
 
+    <div class="collection-filters" role="tablist" aria-label="Filter sneakers by style">
+      <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-chip" type="button" data-filter="classic" aria-pressed="false">Classic</button>
+      <button class="filter-chip" type="button" data-filter="limited" aria-pressed="false">Limited</button>
+      <button class="filter-chip" type="button" data-filter="runner" aria-pressed="false">Runner</button>
+      <button class="filter-chip" type="button" data-filter="court" aria-pressed="false">Court</button>
+      <button class="filter-chip" type="button" data-filter="street" aria-pressed="false">Street</button>
+    </div>
 
+    <div class="collection-grid">
+      <article class="product-card" data-category="classic street">
+        <div class="product-card__img"><img src="img/airforce1.jpg" alt="Air Force 1"></div>
+        <div class="product-card__body">
+          <div class="product-card__row">
+            <h3>Air Force 1</h3>
+            <span class="product-card__tag">Classic</span>
+          </div>
+          <p>Clean profile with all-day comfort and easy styling.</p>
+          <div class="product-card__row">
+            <span class="product-card__price">$145</span>
+            <span class="product-card__rating">★★★★☆</span>
+          </div>
+        </div>
+      </article>
 
+      <article class="product-card" data-category="limited street">
+        <div class="product-card__img"><img src="img/yeezy1.jpg" alt="Yeezy"></div>
+        <div class="product-card__body">
+          <div class="product-card__row">
+            <h3>Yeezy Boost</h3>
+            <span class="product-card__tag">Limited</span>
+          </div>
+          <p>Minimalist shape with a soft knit upper and responsive sole.</p>
+          <div class="product-card__row">
+            <span class="product-card__price">$220</span>
+            <span class="product-card__rating">★★★★★</span>
+          </div>
+        </div>
+      </article>
 
+      <article class="product-card" data-category="runner everyday">
+        <div class="product-card__img"><img src="img/presto.jpg" alt="Nike Presto"></div>
+        <div class="product-card__body">
+          <div class="product-card__row">
+            <h3>Nike Presto</h3>
+            <span class="product-card__tag">Runner</span>
+          </div>
+          <p>Lightweight fit and breathable construction for daily wear.</p>
+          <div class="product-card__row">
+            <span class="product-card__price">$70</span>
+            <span class="product-card__rating">★★★★☆</span>
+          </div>
+        </div>
+      </article>
 
-<!-- Banner End-->
-<!--=============== SWIPER JS ===============-->
-<script src="main.js"></script>
-<script src="
-https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js
-"></script>
-  <script src="assets/swiper-bundle.min.js"></script>
-  
+      <article class="product-card" data-category="street everyday">
+        <div class="product-card__img"><img src="img/puma.jpg" alt="Puma Sneaker"></div>
+        <div class="product-card__body">
+          <div class="product-card__row">
+            <h3>Puma Core</h3>
+            <span class="product-card__tag">Street</span>
+          </div>
+          <p>Bold side profile with strong grip and a durable build.</p>
+          <div class="product-card__row">
+            <span class="product-card__price">$100</span>
+            <span class="product-card__rating">★★★☆☆</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="court classic">
+        <div class="product-card__img"><img src="img/airjordans.jpg" alt="Air Jordan"></div>
+        <div class="product-card__body">
+          <div class="product-card__row">
+            <h3>Air Jordan</h3>
+            <span class="product-card__tag">Icon</span>
+          </div>
+          <p>Basketball heritage silhouette with premium accents.</p>
+          <div class="product-card__row">
+            <span class="product-card__price">$240</span>
+            <span class="product-card__rating">★★★★★</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="outdoor classic">
+        <div class="product-card__img"><img src="img/tims.jpg" alt="Timberland"></div>
+        <div class="product-card__body">
+          <div class="product-card__row">
+            <h3>Timber Utility</h3>
+            <span class="product-card__tag">Outdoor</span>
+          </div>
+          <p>Rugged materials with dependable support in every step.</p>
+          <div class="product-card__row">
+            <span class="product-card__price">$90</span>
+            <span class="product-card__rating">★★★★☆</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="court runner">
+        <div class="product-card__img"><img src="img/kobe1212.jpg" alt="Kobe 12"></div>
+        <div class="product-card__body">
+          <div class="product-card__row">
+            <h3>Kobe 12</h3>
+            <span class="product-card__tag">Court</span>
+          </div>
+          <p>Low profile control with responsive movement for pace.</p>
+          <div class="product-card__row">
+            <span class="product-card__price">$180</span>
+            <span class="product-card__rating">★★★★☆</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="court agile">
+        <div class="product-card__img"><img src="img/kyrie2.jpg" alt="Kyrie 2"></div>
+        <div class="product-card__body">
+          <div class="product-card__row">
+            <h3>Kyrie 2</h3>
+            <span class="product-card__tag">Agile</span>
+          </div>
+          <p>Dynamic traction and secure lockdown for quick cuts.</p>
+          <div class="product-card__row">
+            <span class="product-card__price">$160</span>
+            <span class="product-card__rating">★★★★☆</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="classic street">
+        <div class="product-card__img"><img src="img/jordansretro.jpg" alt="Jordan Retro"></div>
+        <div class="product-card__body">
+          <div class="product-card__row">
+            <h3>Jordan Retro</h3>
+            <span class="product-card__tag">Retro</span>
+          </div>
+          <p>Vintage court energy with a bold high-top profile.</p>
+          <div class="product-card__row">
+            <span class="product-card__price">$210</span>
+            <span class="product-card__rating">★★★★★</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="runner street">
+        <div class="product-card__img"><img src="img/airmax3.jpg" alt="Nike Air Max"></div>
+        <div class="product-card__body">
+          <div class="product-card__row">
+            <h3>Air Max Pulse</h3>
+            <span class="product-card__tag">Runner</span>
+          </div>
+          <p>Visible cushioning and lightweight support for city movement.</p>
+          <div class="product-card__row">
+            <span class="product-card__price">$165</span>
+            <span class="product-card__rating">★★★★☆</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="limited street">
+        <div class="product-card__img"><img src="img/balenciaga.jpg" alt="Balenciaga sneaker"></div>
+        <div class="product-card__body">
+          <div class="product-card__row">
+            <h3>Balenciaga Track</h3>
+            <span class="product-card__tag">Limited</span>
+          </div>
+          <p>Layered technical design with a fashion-forward statement.</p>
+          <div class="product-card__row">
+            <span class="product-card__price">$320</span>
+            <span class="product-card__rating">★★★★☆</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="court runner">
+        <div class="product-card__img"><img src="img/lebron13.jpg" alt="LeBron 13"></div>
+        <div class="product-card__body">
+          <div class="product-card__row">
+            <h3>LeBron 13</h3>
+            <span class="product-card__tag">Court</span>
+          </div>
+          <p>Power-focused cushioning with secure lockdown for impact play.</p>
+          <div class="product-card__row">
+            <span class="product-card__price">$190</span>
+            <span class="product-card__rating">★★★★☆</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <p class="collection-empty" id="collection-empty" hidden>No matches in this filter yet. Try another style.</p>
+
+    <div class="collection-banner">
+      <div>
+        <h3>Weekend Offer: 20% Off Select Pairs</h3>
+        <p>Use code ONICE20 at checkout for eligible products this weekend.</p>
+      </div>
+      <a href="gallery.html">View Gallery</a>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
 </body>
 </html>

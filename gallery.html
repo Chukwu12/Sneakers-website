@@ -1,88 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <title>Onice Kicks | Gallery</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <style>*{transition: 0.4s;}</style>
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/bb1892d46f.js" crossorigin="anonymous"></script>
-  
-<!--=============== FAVICON ===============-->
-<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-
-<!--=============== REMIXICONS ===============-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
-
-<!--=============== SWIPER CSS ===============-->
-      <link rel="stylesheet" href="">
-  <!-- CSS -->
-  <link rel="stylesheet" href="/css/styles.css">
-  <style id="cssOutput"></style>
-  <title>Onice Kicks</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/gallery.css">
 </head>
-<body>
+<body class="gallery-page">
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="index.html" class="brand">Onice Kicks</a>
 
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+          <li><a href="collection.html" class="nav__link">Collections</a></li>
+          <li><a href="Profolio.html" class="nav__link">Portfolio</a></li>
+        </ul>
 
-<!-- Nav -->
-<header>
-  <nav>
-    <a href="index.html" class="brand">Onice Kicks</a>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gallery.html">Gallrey</a></li>
-      <li><a href="collection.html">Collections</a></li>
-    </ul>
- 
-    <a href="#"><span class="material-icons-outlined">
-      shopping_bag
-      <!-- close btn -->
-      <div class="nav__close" id="nav-close">
-        <i class="ri-close-line"></i>
+        <a href="#" class="nav__cart" aria-label="View cart">
+          <span class="material-icons-outlined">shopping_bag</span>
+        </a>
+
+        <div class="nav__close" id="nav-close" aria-label="Close navigation">
+          <i class="ri-close-line"></i>
+        </div>
       </div>
-      <!-- toggle btn -->
-      <div class="nav__toggle" id="nav-toggle">
+
+      <div class="nav__toggle" id="nav-toggle" aria-label="Open navigation">
         <i class="ri-apps-2-fill"></i>
       </div>
-  </nav>
-</header>
-<!-- Nav  End-->
+    </nav>
+  </header>
 
-<section class="home">
-  <div class="home-container"></div>
-</section>
-    
+  <section class="home">
+    <div class="home-container">
+      <span class="home-kicker">Drop 06</span>
+      <h1 class="home-title">Street Tech Sneaker Gallery</h1>
+      <p class="home-copy">Explore signature pairs, alternate colorways, and details that define each silhouette.</p>
+    </div>
+  </section>
+
+  <section class="portfolio-callout">
+    <div class="portfolio-callout__card">
+      <p>Newly Updated</p>
+      <h2>Portfolio page has a full modern refresh.</h2>
+      <a href="Profolio.html">View Portfolio</a>
+    </div>
+  </section>
+
   <section>
     <div class="container">
       <main>
-        <div>
-          <span>MENS-</span>
-          <h1 class="title">
+        <div class="load-in" style="--delay: 80ms;">
+          <span>Mens Collection</span>
+          <h2 class="title">
             <span class="titleText">Red Nike Jordan Max Aura 3</span>
             <span class="titleOverlay"></span>
-          </h1>
+          </h2>
           <p class="description">
-            Lorem ipsum dolor sit ammet 
+            Bring a piece of history to urban streets with a basketball-inspired build and everyday comfort.
           </p>
           <div class="thumbs">
-            <img src="img/thumbs/shoe1-1/img1.jpg" class="thumb-active"/>
-            <img src="img/thumbs/shoe1-1/img2.jpg" />
-            <img src="img/thumbs/shoe1-1/img3.jpg" />
-            <img src="img/thumbs/shoe1-1/img4.jpg" />
+            <img src="img/thumbs/shoe1-1/img1.jpg" class="thumb-active" alt="Jordan thumbnail one">
+            <img src="img/thumbs/shoe1-1/img2.jpg" alt="Jordan thumbnail two">
+            <img src="img/thumbs/shoe1-1/img3.jpg" alt="Jordan thumbnail three">
+            <img src="img/thumbs/shoe1-1/img4.jpg" alt="Jordan thumbnail four">
           </div>
         </div>
-        <div class="showcase">
+
+        <div class="showcase load-in" style="--delay: 170ms;">
           <div>
-            <img src="img/showcase/shoe1-1/img1.png" />
+            <img src="img/showcase/shoe1-1/img1.png" alt="Nike Jordan Max Aura 3" role="button" tabindex="0" aria-label="Open sneaker image preview">
             <div class="shadow"></div>
           </div>
         </div>
-        <div class="options">
+
+        <div class="options load-in" style="--delay: 260ms;">
           <h4>Size</h4>
           <ul class="sizes">
             <li class="size-active">10</li>
@@ -91,58 +92,47 @@
             <li>13</li>
             <li>14</li>
           </ul>
+
           <div class="reviews">
             <h4>Reviews</h4>
             <ul class="stars">
-              <li><span class="material-icons-outlined">
-                star
-              </span></li>
-               <li><span class="material-icons-outlined">
-                star
-              </span></li>
-               <li><span class="material-icons-outlined">
-                star
-              </span></li>
-               <li><span class="material-icons-outlined">
-                star
-              </span></li>
-               <li><span class="material-icons-outlined">
-                star_outline
-              </span></li>
+              <li><span class="material-icons-outlined">star</span></li>
+              <li><span class="material-icons-outlined">star</span></li>
+              <li><span class="material-icons-outlined">star</span></li>
+              <li><span class="material-icons-outlined">star</span></li>
+              <li><span class="material-icons-outlined">star_outline</span></li>
             </ul>
           </div>
+
           <div class="pricing">
             <h4>Price</h4>
             <h4 class="price">$150</h4>
           </div>
+
           <div class="colors">
             <h4>Colors</h4>
             <ul>
-              <li class="color color-active"></li>
-              <li class="color"></li>
+              <li class="color color-active" aria-label="Color option one"></li>
+              <li class="color" aria-label="Color option two"></li>
             </ul>
           </div>
         </div>
       </main>
-      
+
       <section class="bar-bottom">
-        <div>
-          <a href="#">
-            <span class="material-icons-outlined">
-              play_arrow
-            </span>
+        <div class="load-in" style="--delay: 320ms;">
+          <a href="#" class="watch-video">
+            <span class="material-icons-outlined">play_arrow</span>
             <span>Play Video</span>
-          </a>  
+          </a>
         </div>
-        <div class="controls">
+
+        <div class="controls load-in" style="--delay: 380ms;">
           <div class="arrows">
-            <span class="material-icons-outlined arr-left">
-              arrow_right_alt
-            </span>
-            <span class="material-icons-outlined arr-right">
-              arrow_right_alt
-            </span>
+            <span class="material-icons-outlined arr-left">arrow_right_alt</span>
+            <span class="material-icons-outlined arr-right">arrow_right_alt</span>
           </div>
+
           <div>
             <small class="shoe-num">01</small>
             <div class="pagination">
@@ -151,19 +141,27 @@
               <span class="pag"></span>
             </div>
             <small class="shoe-total">03</small>
-          </div>        
+          </div>
         </div>
-        <div class="cart">
+
+        <div class="cart load-in" style="--delay: 440ms;">
           <button>Add To Cart</button>
-           <span class="material-icons-outlined">
-            favorite_border
-           </span>
+          <span class="material-icons-outlined">favorite_border</span>
         </div>
       </section>
     </div>
   </section>
 
-  
-  <script src="./main.js"></script>
+  <div class="lightbox" data-lightbox aria-hidden="true">
+    <div class="lightbox__backdrop" data-lightbox-close></div>
+    <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-label="Sneaker image preview">
+      <button class="lightbox__close" type="button" data-lightbox-close aria-label="Close preview">
+        <span class="material-icons-outlined">close</span>
+      </button>
+      <img src="" alt="Expanded sneaker preview" class="lightbox__img" data-lightbox-image>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
