@@ -1,5 +1,9 @@
 {
-  "start": "node server.js",
+  "name": "sneakers-website",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
