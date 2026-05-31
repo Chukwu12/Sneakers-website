@@ -33,10 +33,10 @@ let shoe = 1;
 
 
 // ========== KicksDB API Integration (v3 StockX) ========== //
-// Paste your real API key below:
+
 
 // Use local Node.js proxy for sneaker data
-const LOCAL_API_URL = 'https://your-app.up.railway.app/api/sneakers';
+const LOCAL_API_URL = 'https://sneakers-website-production.up.railway.app';
 
 async function fetchSneakers() {
   try {
