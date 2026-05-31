@@ -31,31 +31,75 @@ let id = 1;
 let colorType = 1;
 let shoe = 1;
 
-// Shoe Details / Data
-const colors = [
-  ['#ae001b', '#111111'],
-  ['linear-gradient(0deg, orange, red)', '#bda08e'],
-  [
-    'linear-gradient(0deg, #00b8ea 0%, #e6882d 50%, #e56da6 100%)',
-    'linear-gradient(0deg, #dae766, #b2afaa)'
-  ]
-];
 
-const prices = ['150', '250', '175'];
+// ========== KicksDB API Integration (v3 StockX) ========== //
+// Paste your real API key below:
 
-const names = [
-  ['Red Nike Jordan Max Aura 3', 'Black Nike Jordan Max Aura 3'],
-  ['Black/Orange Nike Air Max 95', 'Beige/Gray Nike Air Max 95'],
-  ['Colorful NIKE Jordan Delta 2 SP', 'Gray NIKE Jordan Delta 2 SP']
-];
+// Use local Node.js proxy for sneaker data
+const LOCAL_API_URL = '/api/sneakers';
 
-const descriptions = [
-  ['Bring a piece of history to the city\'s urban streets as you walk into Nike Jordan Max Aura 3 men\'s sneakers. Inspired by the rich Jordanian heritage, this model has the energy of basketball shoes and a look that changes the perception of the classic style.'],
-  ['Nike Air Max 95 men\'s sneakers move you with the strength and fluidity inspired by the anatomy of the human body. The central sole forms the basis of these sneakers, while the structured side panels give a solid and stable construction. Flexible incisions in the sole allow your feet to move naturally.'],
-  ['Jordan Delta 2 SP men\'s basketball shoes offer a fresh and fearless approach to the characteristics you want: durability, comfort and the attitude of the Jordan brand. The first model of Delta 2 sneakers, with the same idea, received redesigned lines and modified components.']
-];
+async function fetchSneakers() {
+  try {
+    const response = await fetch(LOCAL_API_URL);
+    if (!response.ok) throw new Error('API error');
+    const data = await response.json();
+    // v3 StockX API returns { data: [ ... ] }
+    return Array.isArray(data.data) ? data.data : [];
+  } catch (err) {
+    console.error('Failed to fetch sneakers:', err);
+    return [];
+  }
+}
 
-const ratings = [4, 5, 3];
+function renderSneakerCard(sneaker) {
+  // v3 StockX product fields: title, brand, media, retailPrice, urlKey, description, category, etc.
+  const image = sneaker.media && sneaker.media.imageUrl ? sneaker.media.imageUrl : 'img/placeholder.jpg';
+  const name = sneaker.title || sneaker.name || 'Sneaker';
+  const brand = sneaker.brand || '';
+  const category = sneaker.category || '';
+  const price = sneaker.retailPrice ? `$${sneaker.retailPrice}` : 'N/A';
+  const description = sneaker.description || '';
+  // No rating in StockX, so use 4 stars as default
+  return `
+    <article class="product-card" data-category="${category.toLowerCase()}">
+      <div class="product-card__img"><img src="${image}" alt="${name}"></div>
+      <div class="product-card__body">
+        <div class="product-card__row">
+          <h3>${name}</h3>
+          <span class="product-card__tag">${brand || category || 'Sneaker'}</span>
+        </div>
+        <p>${description}</p>
+        <div class="product-card__row">
+          <span class="product-card__price">${price}</span>
+          <span class="product-card__rating">★★★★☆</span>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+async function loadSneakerCollection() {
+  const grid = document.querySelector('.collection-grid');
+  const count = document.getElementById('collection-count');
+  const empty = document.getElementById('collection-empty');
+  if (!grid) return;
+  grid.innerHTML = '<p>Loading sneakers...</p>';
+  const sneakers = await fetchSneakers();
+  if (sneakers.length === 0) {
+    grid.innerHTML = '';
+    if (empty) empty.hidden = false;
+    if (count) count.innerText = '0 Sneakers';
+    return;
+  }
+  grid.innerHTML = sneakers.map(renderSneakerCard).join('');
+  if (count) count.innerText = sneakers.length + (sneakers.length === 1 ? ' Sneaker' : ' Sneakers');
+  if (empty) empty.hidden = true;
+}
+
+// Auto-load on collection page
+if (window.location.pathname.includes('collection.html')) {
+  loadSneakerCollection();
+}
 
 function getImage(imgType, currentShoe, currentColorType, currentId, extension) {
   return 'img/' + imgType + '/shoe' + currentShoe + '-' + currentColorType + '/img' + currentId + '.' + extension;
