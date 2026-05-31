@@ -5,14 +5,12 @@ const express = require('express');
 const fetch = require('node-fetch');
 const cors = require('cors');
 require('dotenv').config();
-
-const app = express();
+const cors = require('cors'); 
 const PORT = process.env.PORT || 3001;
 
 
-const cors = require('cors');
 app.use(cors());
-
+app.use(cors());
 const KICKSDB_API_KEY = process.env.KICKS_DB_API || 'KICKS-4D2B-724A-8C96-6D10E9761E9C'; 
 const KICKSDB_API_URL = 'https://api.kicks.dev/v3/stockx/products?limit=12';
 
