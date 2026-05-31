@@ -36,7 +36,7 @@ let shoe = 1;
 // Paste your real API key below:
 
 // Use local Node.js proxy for sneaker data
-const LOCAL_API_URL = '/api/sneakers';
+const LOCAL_API_URL = 'https://your-app.up.railway.app/api/sneakers';
 
 async function fetchSneakers() {
   try {

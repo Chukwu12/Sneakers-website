@@ -9,6 +9,8 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+
+const cors = require('cors');
 app.use(cors());
 
 const KICKSDB_API_KEY = process.env.KICKS_DB_API || 'KICKS-4D2B-724A-8C96-6D10E9761E9C'; 
