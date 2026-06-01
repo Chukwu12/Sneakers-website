@@ -10,18 +10,30 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/profolio.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="index.html">ONICEKICKS</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        Menu
-      </button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary Navigation">
-        <a href="index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="Profolio.html">Portfolio</a>
+    <header class="header" id="header">
+      <nav class="nav">
+        <a href="index.html" class="brand">Onice Kicks</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Home</a></li>
+            <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+            <li><a href="collection.html" class="nav__link">Collections</a></li>
+            <li><a href="Profolio.html" class="nav__link">Portfolio</a></li>
+          </ul>
+
+          <div class="nav__close" id="nav-close" aria-label="Close navigation">
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle" aria-label="Open navigation">
+          <i class="ri-apps-2-fill"></i>
+        </div>
       </nav>
     </header>
 
@@ -35,132 +47,17 @@
         </p>
       </section>
 
-      <section class="drop-grid" aria-label="Upcoming shoes">
-        <article class="shoe-card">
-          <img src="img/giusippe.png" alt="Giuseppe Zanotti sneakers" loading="lazy" />
-          <div class="shoe-meta">
-            <h2>Giuseppe Zanotti</h2>
-            <p>$325.00</p>
-          </div>
-        </article>
+      <section class="portfolio-controls" id="portfolio-sort-controls" aria-label="Sort portfolio sneakers">
+        <button class="portfolio-chip is-active" type="button" data-sort="recent" aria-pressed="true">Most Recent</button>
+        <button class="portfolio-chip" type="button" data-sort="below-target" aria-pressed="false">Below Target</button>
+        <button class="portfolio-chip" type="button" data-sort="highest-upside" aria-pressed="false">Highest Upside</button>
+      </section>
 
-        <article class="shoe-card">
-          <img src="img/givanchy.jpg" alt="Givenchy sneakers" loading="lazy" />
-          <div class="shoe-meta">
-            <h2>Givenchy</h2>
-            <p>$400.00</p>
-          </div>
-        </article>
-
-        <article class="shoe-card">
-          <img src="img/guccii.jpg" alt="Gucci sneakers" loading="lazy" />
-          <div class="shoe-meta">
-            <h2>Gucci</h2>
-            <p>$300.00</p>
-          </div>
-        </article>
-
-        <article class="shoe-card">
-          <img src="img/hermas.jpg" alt="Hermes sneakers" loading="lazy" />
-          <div class="shoe-meta">
-            <h2>Hermes</h2>
-            <p>$250.00</p>
-          </div>
-        </article>
-
-        <article class="shoe-card">
-          <img src="img/foamposite.png" alt="Foamposite sneakers" loading="lazy" />
-          <div class="shoe-meta">
-            <h2>Foamposite</h2>
-            <p>$200.00</p>
-          </div>
-        </article>
-
-        <article class="shoe-card">
-          <img src="img/roc.jpg" alt="Air Force 1 Roc Nation edition" loading="lazy" />
-          <div class="shoe-meta">
-            <h2>Air Force 1 (Roc Nation)</h2>
-            <p>$175.00</p>
-          </div>
-        </article>
-
-        <article class="shoe-card">
-          <img src="img/wang2.jpg" alt="Yeezy Frost sneakers" loading="lazy" />
-          <div class="shoe-meta">
-            <h2>Yeezy Frost</h2>
-            <p>$575.00</p>
-          </div>
-        </article>
-
-        <article class="shoe-card">
-          <img src="img/season.jpg" alt="Yeezy Classic sneakers" loading="lazy" />
-          <div class="shoe-meta">
-            <h2>Yeezy Classic</h2>
-            <p>$475.00</p>
-          </div>
-        </article>
-
-        <article class="shoe-card">
-          <img src="img/penny.jpg" alt="Penny sneakers" loading="lazy" />
-          <div class="shoe-meta">
-            <h2>Penny</h2>
-            <p>$170.00</p>
-          </div>
-        </article>
-
-        <article class="shoe-card">
-          <img src="img/barkley.jpeg" alt="Barkley sneakers" loading="lazy" />
-          <div class="shoe-meta">
-            <h2>Barkley</h2>
-            <p>$180.00</p>
-          </div>
-        </article>
-
-        <article class="shoe-card">
-          <img src="img/airmax.jpg" alt="Air Max sneakers" loading="lazy" />
-          <div class="shoe-meta">
-            <h2>Air Max</h2>
-            <p>$175.00</p>
-          </div>
-        </article>
-
-        <article class="shoe-card">
-          <img src="img/air max pro 270.jpeg" alt="Air Max Pro 270 sneakers" loading="lazy" />
-          <div class="shoe-meta">
-            <h2>Air Max Pro 270</h2>
-            <p>$175.00</p>
-          </div>
-        </article>
+      <section class="drop-grid" id="drop-grid" aria-label="Upcoming shoes">
+        <!-- Shoe cards will be injected here by JS -->
       </section>
     </main>
 
-    <script>
-      const menuToggle = document.querySelector('.menu-toggle');
-      const siteNav = document.querySelector('.site-nav');
-
-      if (menuToggle && siteNav) {
-        menuToggle.addEventListener('click', () => {
-          const isOpen = siteNav.classList.toggle('is-open');
-          menuToggle.setAttribute('aria-expanded', String(isOpen));
-        });
-
-        const currentPath = window.location.pathname.split('/').pop().toLowerCase() || 'index.html';
-        const navLinks = siteNav.querySelectorAll('a');
-
-        navLinks.forEach((link) => {
-          const href = (link.getAttribute('href') || '').toLowerCase();
-          const normalizedHref = href === '' ? 'index.html' : href;
-          const isActive = normalizedHref === currentPath;
-
-          link.classList.toggle('is-active', isActive);
-
-          if (isActive) {
-            link.setAttribute('aria-current', 'page');
-          } else {
-            link.removeAttribute('aria-current');
-          }
-        });
-      }
-    </script>
+    <script src="backend/main.js"></script>
   </body>
 </html>

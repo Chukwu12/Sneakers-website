@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Onice Kicks | Gallery</title>
+  <title>Onice Kicks | Lookbook</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,10 +25,6 @@
           <li><a href="Profolio.html" class="nav__link">Portfolio</a></li>
         </ul>
 
-        <a href="#" class="nav__cart" aria-label="View cart">
-          <span class="material-icons-outlined">shopping_bag</span>
-        </a>
-
         <div class="nav__close" id="nav-close" aria-label="Close navigation">
           <i class="ri-close-line"></i>
         </div>
@@ -42,19 +38,13 @@
 
   <section class="home">
     <div class="home-container">
-      <span class="home-kicker">Drop 06</span>
-      <h1 class="home-title">Street Tech Sneaker Gallery</h1>
-      <p class="home-copy">Explore signature pairs, alternate colorways, and details that define each silhouette.</p>
+      <span class="home-kicker">Live Feed</span>
+      <h1 class="home-title">Street Tech Sneaker Lookbook</h1>
+      <p class="home-copy">Explore featured pairs, alternate angles, and the details that make each silhouette stand out.</p>
     </div>
   </section>
 
-  <section class="portfolio-callout">
-    <div class="portfolio-callout__card">
-      <p>Newly Updated</p>
-      <h2>Portfolio page has a full modern refresh.</h2>
-      <a href="Profolio.html">View Portfolio</a>
-    </div>
-  </section>
+
 
   <section>
     <div class="container">
@@ -62,37 +52,27 @@
         <div class="load-in" style="--delay: 80ms;">
           <span>Mens Collection</span>
           <h2 class="title">
-            <span class="titleText">Red Nike Jordan Max Aura 3</span>
+            <span class="titleText" id="gallery-title">Loading featured sneaker...</span>
             <span class="titleOverlay"></span>
           </h2>
-          <p class="description">
-            Bring a piece of history to urban streets with a basketball-inspired build and everyday comfort.
-          </p>
+          <p class="description" id="gallery-description">Pulling the first featured pair from the sneaker feed.</p>
           <div class="thumbs">
-            <img src="img/thumbs/shoe1-1/img1.jpg" class="thumb-active" alt="Jordan thumbnail one">
-            <img src="img/thumbs/shoe1-1/img2.jpg" alt="Jordan thumbnail two">
-            <img src="img/thumbs/shoe1-1/img3.jpg" alt="Jordan thumbnail three">
-            <img src="img/thumbs/shoe1-1/img4.jpg" alt="Jordan thumbnail four">
+            <img src="img/placeholder.jpg" class="thumb-active" alt="Gallery thumbnail 1">
+            <img src="img/placeholder.jpg" alt="Gallery thumbnail 2">
+            <img src="img/placeholder.jpg" alt="Gallery thumbnail 3">
+            <img src="img/placeholder.jpg" alt="Gallery thumbnail 4">
           </div>
         </div>
 
         <div class="showcase load-in" style="--delay: 170ms;">
           <div>
-            <img src="img/showcase/shoe1-1/img1.png" alt="Nike Jordan Max Aura 3" role="button" tabindex="0" aria-label="Open sneaker image preview">
+            <img src="img/placeholder.jpg" alt="Featured sneaker preview" role="button" tabindex="0" aria-label="Open sneaker image preview">
             <div class="shadow"></div>
           </div>
         </div>
 
         <div class="options load-in" style="--delay: 260ms;">
-          <h4>Size</h4>
-          <ul class="sizes">
-            <li class="size-active">10</li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-          </ul>
-
+        
           <div class="reviews">
             <h4>Reviews</h4>
             <ul class="stars">
@@ -106,16 +86,10 @@
 
           <div class="pricing">
             <h4>Price</h4>
-            <h4 class="price">$150</h4>
+            <h4 class="price" id="gallery-price">$0</h4>
           </div>
 
-          <div class="colors">
-            <h4>Colors</h4>
-            <ul>
-              <li class="color color-active" aria-label="Color option one"></li>
-              <li class="color" aria-label="Color option two"></li>
-            </ul>
-          </div>
+
         </div>
       </main>
 
@@ -135,7 +109,7 @@
 
           <div>
             <small class="shoe-num">01</small>
-            <div class="pagination">
+            <div class="pagination" id="gallery-pagination">
               <span class="pag pag-active"></span>
               <span class="pag"></span>
               <span class="pag"></span>
@@ -145,10 +119,23 @@
         </div>
 
         <div class="cart load-in" style="--delay: 440ms;">
-          <button>Add To Cart</button>
+          <button type="button" id="gallery-save-btn">Save To Portfolio</button>
           <span class="material-icons-outlined">favorite_border</span>
         </div>
       </section>
+    </div>
+  </section>
+
+  <section class="gallery-feed">
+    <div class="gallery-feed__header">
+      <div>
+        <span class="section-kicker">API lookbook</span>
+        <h2>Tap into the live sneaker feed</h2>
+      </div>
+      <p>Each card below is pulled from the same sneaker API and can swap the spotlight above.</p>
+    </div>
+    <div class="gallery-feed__rail" id="gallery-rail">
+      <p>Loading related sneakers...</p>
     </div>
   </section>
 
@@ -162,6 +149,6 @@
     </div>
   </div>
 
-  <script src="main.js"></script>
+  <script src="backend/main.js"></script>
 </body>
 </html>
