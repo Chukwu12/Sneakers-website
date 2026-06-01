@@ -13,6 +13,10 @@ function getApiBaseUrl() {
       return 'http://127.0.0.1:3001';
     }
 
+    if (host.includes('netlify.app')) {
+      return new URL(LOCAL_API_URL).origin;
+    }
+
     return window.location.origin;
   }
 
