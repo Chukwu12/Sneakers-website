@@ -1,5 +1,17 @@
 // ========== Portfolio Watchlist ==========
 const LOCAL_API_URL = 'https://sneakers-website-production.up.railway.app/api/sneakers';
+const CURRENT_PATH = (typeof window !== 'undefined' && window.location && window.location.pathname
+  ? window.location.pathname
+  : '')
+  .toLowerCase();
+
+function isPage(pageName) {
+  return (
+    CURRENT_PATH.endsWith(`/${pageName}.html`) ||
+    CURRENT_PATH === `/${pageName}` ||
+    CURRENT_PATH === `/${pageName}/`
+  );
+}
 
 function getApiBaseUrl() {
   if (typeof window !== 'undefined' && window.location && /^https?:$/.test(window.location.protocol)) {
@@ -325,7 +337,7 @@ async function loadUpcomingSneakers() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  if (window.location.pathname.toLowerCase().includes('profolio.html')) {
+  if (isPage('profolio')) {
     setupPortfolioSortControls();
     loadUpcomingSneakers();
   }
@@ -375,9 +387,9 @@ async function loadFeaturedSneakers() {
 }
 
 if (
-  window.location.pathname.endsWith('index.html') ||
-  window.location.pathname === '/' ||
-  window.location.pathname === ''
+  isPage('index') ||
+  CURRENT_PATH === '/' ||
+  CURRENT_PATH === ''
 ) {
   loadFeaturedSneakers();
 }
@@ -644,7 +656,7 @@ async function loadSneakerCollection() {
   }
 }
 
-if (window.location.pathname.includes('collection.html')) {
+if (isPage('collection')) {
   loadSneakerCollection();
 }
 
@@ -1114,7 +1126,7 @@ async function initGalleryLookbook() {
   updateGallery(0);
 }
 
-if (window.location.pathname.toLowerCase().includes('gallery.html')) {
+if (isPage('gallery')) {
   initGalleryLookbook();
 }
 
