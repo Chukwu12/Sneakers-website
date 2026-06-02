@@ -21,6 +21,7 @@ const corsOptions = {
       'http://127.0.0.1:3000',
       'http://localhost:3000',
       'https://sneakers-website-production.up.railway.app',
+      'https://onicekicks.netlify.app',
     ];
 
     if (allowedOrigins.includes(origin)) {
@@ -29,6 +30,11 @@ const corsOptions = {
 
     // Allow GitHub Codespaces forwarded hosts (e.g. ...-5500.app.github.dev).
     if (/^https:\/\/[a-z0-9-]+\.app\.github\.dev$/i.test(origin)) {
+      return callback(null, true);
+    }
+
+    // Allow Netlify hosted frontend domains.
+    if (/^https:\/\/[a-z0-9-]+\.netlify\.app$/i.test(origin)) {
       return callback(null, true);
     }
 
