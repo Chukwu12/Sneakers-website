@@ -10,7 +10,37 @@ require('dotenv').config();
 const app = express(); // <-- This was missing!
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
+const corsOptions = {
+  origin(origin, callback) {
+    // Allow non-browser tools (curl, server-to-server) and same-machine calls.
+    if (!origin) return callback(null, true);
+
+    const allowedOrigins = [
+      'http://127.0.0.1:5500',
+      'http://localhost:5500',
+      'http://127.0.0.1:3000',
+      'http://localhost:3000',
+      'https://sneakers-website-production.up.railway.app',
+    ];
+
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+
+    // Allow GitHub Codespaces forwarded hosts (e.g. ...-5500.app.github.dev).
+    if (/^https:\/\/[a-z0-9-]+\.app\.github\.dev$/i.test(origin)) {
+      return callback(null, true);
+    }
+
+    return callback(new Error(`CORS blocked for origin: ${origin}`));
+  },
+  methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  optionsSuccessStatus: 204,
+};
+
+app.use(cors(corsOptions));
+app.options(/.*/, cors(corsOptions));
 app.use(express.json());
 
 require('dotenv').config({ path: path.join(__dirname, '.env') });

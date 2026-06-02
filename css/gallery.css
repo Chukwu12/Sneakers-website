@@ -520,6 +520,9 @@ main > div:first-child > span {
 .stars {
   display: flex;
   gap: 0.18rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .stars span {
